@@ -22,6 +22,8 @@ def selection_sort( arr ):
     return arr
 
 
+
+
 # TO-DO:  implement the Bubble Sort function below
 #compare 1st pair of elements
     #if the RHS is less than the LHS, swap
@@ -30,15 +32,16 @@ def selection_sort( arr ):
 # if one or more swaps performed, repeat the above process
 
 def bubble_sort( arr ):
-    # swap_occured = True
-    # while swap_occured:
-    #     swap_occured = False
-    #     for i in range(0, len(arr)-2):
-    #         if i > i+1:
-    #             smallest_index = i
-    #             # restart the loop with the next pair - "revalidate swap_occured"
-    #             swap_occured = True 
-
+    swap_occured = True
+    while swap_occured:
+        swap_occured = False
+        for i in range(0, len(arr)-1):
+            for j in range(len(arr)):
+                if(arr[i] > arr[j]):
+                    swap_occured = True
+                    arr[i], arr[j] = arr[j], arr[i]
+                    # restart the loop with the next pair - "revalidate swap_occured"
+                    
 
     return arr
 

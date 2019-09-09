@@ -14,10 +14,12 @@ def selection_sort( arr ):
             if arr[j] < arr[smallest_index]:
                 smallest_index = j 
         # TO-DO: swap
-        #if the next is larger
-        temp = arr[smallest_index]
-        arr[smallest_index] = arr[cur_index]
-        arr[cur_index] = temp
+        #if the next is larger, variables shift and the next index starts the next round as the temp
+        # this is swapping, temp becomes smallest, smallest becomes current and current becomes temp
+        ## temp = arr[smallest_index]
+        ## arr[smallest_index] = arr[cur_index]
+        ## arr[cur_index] = temp       #aka:
+        arr[smallest_index], arr[cur_index] = arr[cur_index], arr[smallest_index]
 
     return arr
 
@@ -32,18 +34,23 @@ def selection_sort( arr ):
 # if one or more swaps performed, repeat the above process
 
 def bubble_sort( arr ):
+    #if there was no swap, we're done!, else..
     swap_occured = True
     while swap_occured:
+        #switch swap to false, assuming each time is the last
         swap_occured = False
-        for i in range(0, len(arr)-1):
-            for j in range(len(arr)):
-                if(arr[i] > arr[j]):
-                    swap_occured = True
+        # loop through first number...
+        for i in range(0, len(arr)):
+            # and second...
+            for j in range(0, len(arr)):
+                # compare
+                if(arr[i] < arr[j]):
                     arr[i], arr[j] = arr[j], arr[i]
-                    # restart the loop with the next pair - "revalidate swap_occured"
+                    # if a swap occured, switch back to true to revalidate the loop
+                    swap_occured = True
                     
 
-    return arr
+        return arr
 
 
 # STRETCH: implement the Count Sort function below

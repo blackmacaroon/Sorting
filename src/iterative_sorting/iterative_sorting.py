@@ -48,7 +48,6 @@ def bubble_sort( arr ):
                     arr[i], arr[j] = arr[j], arr[i]
                     # if a swap occured, switch back to true to revalidate the loop
                     swap_occured = True
-                    
 
         return arr
 

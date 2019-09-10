@@ -4,7 +4,9 @@ def merge( listA, listB ):
     merged_list = [0] * elements
     # TO-DO
     #loop through each list, compare the first index (that we know is the lowest #) in each list i, j = 0, 0
-    i, j, k = 0, 0, 0
+    i = 0 
+    j = 0
+    k = 0
     # as long as each index is within the range of their list's length
     # while i in range (0, len(listA) -1) or j in range (0, len(listB) -1):
     # aka:
@@ -19,15 +21,25 @@ def merge( listA, listB ):
             merged_list = listB[j]
             j = j + 1
             k = k + 1
+    while i < len(listA):
+        merged_list[k] = listA[i]
+        k = k + 1
+        i = i + 1
+    while k < len(listB):
+        merged_list[k] = listB[j]
+        k = k + 1
+        j = j + 1
+    print("list after merging")
+    for i in range(len(listA) + len(listB)):
+        print(str(merged_list[i], end = " "))
 
-
-    
     return merged_list
 
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( list ):
     # TO-DO
+    # base case, when do we want it to stop? when the list has no more numbers? on it's last number? len(arr)<=0 or is it <=1??
 
     return list
 

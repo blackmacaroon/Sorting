@@ -13,7 +13,7 @@ def selection_sort( arr ):
         # # check everything to the right of the first index
         # for j in range(cur_index, len(arr)):   #looping through everything to the right of our new array we want to fill
         # # j is the new array, starting with your i value
-        # # if the new array number is less than the next, nothing changes  
+        # # if the new array number is less than the next, nothing changes, otherwise save the index of the smallest number 
         #     if arr[j] < arr[smallest_index]:
         #         smallest_index = j 
         # # TO-DO: swap

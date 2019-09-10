@@ -3,6 +3,14 @@ def merge( arrA, arrB ):
     elements = len( arrA ) + len( arrB )
     merged_arr = [0] * elements
     # TO-DO
+    #loop through each array, compare the first index (that we know is the lowest #) in each array i, j = 0, 0
+    i, j = 0, 0
+    # as long as each index is within the range of their array's length
+    # while i in range (0, len(arrA) -1) or j in range (0, len(arrB) -1):
+    # aka:
+    while i < len(arrA) or j < len(arrB):
+
+
     
     return merged_arr
 

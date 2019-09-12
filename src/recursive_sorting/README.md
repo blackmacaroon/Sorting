@@ -64,7 +64,7 @@ Have you ever wondered how some of the languages you use actually implement thei
 
 ### Your Task 
 - Implement `merge_sort()` in `recursive_sorting.py`. It's recommended that you use...
-  - A recursive function that handles dividing the array (or subarray) in half
+  - A recursive function that handles dividing the list (or sublist) in half
   - A helper function that handles merging sorted pieces back together
 - ***STRETCH*** - Try writing an *in-place* ***Merge Sort*** algorithm.
 
